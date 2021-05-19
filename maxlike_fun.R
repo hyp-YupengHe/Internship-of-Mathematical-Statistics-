@@ -1,4 +1,5 @@
-x<-c(0.1, 0.2, 0.9, 0.8, 0.7, 0.7); n<-length(x)
-f<-function(p) n/(p+1)+sum(log(x, base = exp(1)))
-out<-uniroot(f,c(0,5))
+x<-c(5, 15, 25, 35, 45, 55, 65); v<-c(365, 245, 150, 100, 70, 45, 25)
+n<-1000
+f<-function(p) n/p-sum(x*v)
+out<-uniroot(f,c(0,1))
 out
